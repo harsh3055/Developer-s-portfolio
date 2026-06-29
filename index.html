@@ -1,767 +1,832 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Harsh Goswami — Software Engineer</title>
-  <meta name="description"
-    content="Harsh Goswami — Software Engineer at Rakuten Symphony. Java, Spring Boot, C++, Kubernetes, Microservices." />
-  <link rel="preload" href="main.min.js" as="script" />
-  <link rel="preload" href="harsh-goswami.webp" as="image" type="image/webp" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.min.css?v=2" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Harsh Goswami — Backend Engineer | Java · Spring Boot · Microservices</title>
+  <meta name="description" content="Harsh Goswami — Backend Engineer at Rakuten Symphony, Bangalore. 3+ years building production Java, Spring Boot, C++ and Kubernetes systems for 4G/5G telecom at enterprise scale."/>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content="Harsh Goswami — Backend Engineer | Java · Spring Boot · Microservices"/>
+  <meta property="og:description" content="Backend Engineer at Rakuten Symphony. Java, Spring Boot, C++, Kubernetes, Microservices. Open to distributed systems roles."/>
+  <meta property="og:image"       content="harsh-goswami.jpg"/>
+  <meta property="og:url"         content="https://harshgoswami.dev"/>
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Harsh Goswami — Backend Engineer"/>
+  <meta name="twitter:description" content="Backend Engineer at Rakuten Symphony. Java, Spring Boot, Kubernetes, Microservices."/>
+  <meta name="twitter:image"       content="harsh-goswami.jpg"/>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harsh Goswami",
+    "jobTitle": "Backend Engineer",
+    "worksFor": { "@type": "Organization", "name": "Rakuten Symphony" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN" },
+    "email": "harsh.goswami3054@gmail.com",
+    "url": "https://harshgoswami.dev",
+    "sameAs": [
+      "https://linkedin.com/in/harshgoswami27",
+      "https://github.com/harsh3055",
+      "https://leetcode.com/u/octothorpe27/"
+    ],
+    "knowsAbout": ["Java", "Spring Boot", "C++", "Kubernetes", "Microservices", "Distributed Systems", "4G LTE", "5G NR"]
+  }
+  </script>
+
+  <link rel="preload" href="main.min.js" as="script"/>
+  <link rel="preload" href="harsh-goswami.webp" as="image" type="image/webp"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="style.min.css?v=2"/>
 </head>
 
 <body>
 
-  <!-- ── NAV ── -->
-  <nav>
-    <a href="#" class="nav-logo">Harsh<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Stack</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#leetcode">DSA</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <!-- moon: shown in dark mode -->
-        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
-        <!-- sun: shown in light mode -->
-        <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="4" />
-          <line x1="12" y1="2" x2="12" y2="4" />
-          <line x1="12" y1="20" x2="12" y2="22" />
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-          <line x1="2" y1="12" x2="4" y2="12" />
-          <line x1="20" y1="12" x2="22" y2="12" />
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
-      </button>
-      <a href="#contact" class="nav-cta">Let's talk</a>
-      <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Open menu">☰</button>
-    </div>
-  </nav>
-
-  <!-- ── MOBILE NAV DRAWER ── -->
-  <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
-    <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Close menu">✕</button>
-    <a href="#about" class="nav-drawer-link" onclick="closeDrawer()">About</a>
-    <a href="#experience" class="nav-drawer-link" onclick="closeDrawer()">Experience</a>
-    <a href="#skills" class="nav-drawer-link" onclick="closeDrawer()">Stack</a>
-    <a href="#projects" class="nav-drawer-link" onclick="closeDrawer()">Projects</a>
-    <a href="#research" class="nav-drawer-link" onclick="closeDrawer()">Research</a>
-    <a href="#leetcode" class="nav-drawer-link" onclick="closeDrawer()">DSA</a>
-    <a href="#contact" class="nav-drawer-link" onclick="closeDrawer()">Contact</a>
-    <a href="#contact" class="nav-drawer-link nav-drawer-cta" onclick="closeDrawer()">Let's talk</a>
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" class="nav-logo">Harsh<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Stack</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#leetcode">DSA</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <!-- moon: shown in dark mode -->
+      <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <!-- sun: shown in light mode -->
+      <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="#contact" class="nav-cta">Let's talk</a>
+    <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Open menu">☰</button>
   </div>
-  <div class="nav-overlay" id="nav-overlay" onclick="closeDrawer()"></div>
+</nav>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <div class="hero-img-col">
-      <div class="hero-img-wrap">
-        <picture>
-          <source srcset="harsh-goswami.webp" type="image/webp" />
-          <img src="harsh-goswami.jpg" alt="Harsh Goswami" class="hero-photo" loading="eager" fetchpriority="high"
-            decoding="async"
-            onerror="this.closest('picture').style.display='none';this.closest('.hero-img-wrap').querySelector('.hero-photo-fallback').style.display='flex'" />
-        </picture>
-        <div class="hero-photo-fallback">HG</div>
-      </div>
-    </div>
-    <div class="hero-info-col">
-      <div class="hero-pill-row">
-        <span class="hero-pill hero-pill--green">● Open to opportunities</span>
-        <span class="hero-pill hero-pill--purple">Bangalore · Hybrid</span>
-      </div>
-      <h1 class="hero-name">Harsh Goswami</h1>
-      <p class="hero-role">Software Engineer · <span class="hero-role-co">Rakuten Symphony</span></p>
-      <p class="hero-sub hero-sub--skills">Java · Spring Boot · Microservices · C++ · Docker · Kubernetes · CI/CD</p>
-      <p class="hero-sub hero-sub--creds">IIITM Gwalior &nbsp;·&nbsp; IEEE Published</p>
-      <div class="hero-btns">
-        <a href="#experience" class="btn-dark">View Experience ↗</a>
-        <a href="#contact" class="btn-light">Say hello</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat-num" id="hero-lc">0</span>
-          <span class="hero-stat-lbl">LeetCode solved</span>
-        </div>
-        <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">3+</span>
-          <span class="hero-stat-lbl">Years at Rakuten</span>
-        </div>
-        <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">100+</span>
-          <span class="hero-stat-lbl">Bugs remediated</span>
-        </div>
-        <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">1</span>
-          <span class="hero-stat-lbl">IEEE publication</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ── MOBILE NAV DRAWER ── -->
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Close menu">✕</button>
+  <a href="#about"      class="nav-drawer-link" onclick="closeDrawer()">About</a>
+  <a href="#experience" class="nav-drawer-link" onclick="closeDrawer()">Experience</a>
+  <a href="#skills"     class="nav-drawer-link" onclick="closeDrawer()">Stack</a>
+  <a href="#projects"   class="nav-drawer-link" onclick="closeDrawer()">Projects</a>
+  <a href="#research"   class="nav-drawer-link" onclick="closeDrawer()">Research</a>
+  <a href="#leetcode"        class="nav-drawer-link" onclick="closeDrawer()">DSA</a>
+  <a href="#certifications"  class="nav-drawer-link" onclick="closeDrawer()">Certs</a>
+  <a href="#contact"         class="nav-drawer-link" onclick="closeDrawer()">Contact</a>
+  <a href="#contact"    class="nav-drawer-link nav-drawer-cta" onclick="closeDrawer()">Let's talk</a>
+</div>
+<div class="nav-overlay" id="nav-overlay" onclick="closeDrawer()"></div>
 
-  <!-- ── MARQUEE ── -->
-  <div class="marquee-wrap">
-    <div class="marquee-inner">
-      <span class="marquee-item">Java <span class="dot">✦</span></span>
-      <span class="marquee-item">Spring Boot <span class="dot">✦</span></span>
-      <span class="marquee-item">C++ <span class="dot">✦</span></span>
-      <span class="marquee-item">Kubernetes <span class="dot">✦</span></span>
-      <span class="marquee-item">Jenkins <span class="dot">✦</span></span>
-      <span class="marquee-item">Microservices <span class="dot">✦</span></span>
-      <span class="marquee-item">React.js <span class="dot">✦</span></span>
-      <span class="marquee-item">PostgreSQL <span class="dot">✦</span></span>
-      <span class="marquee-item">Multithreading <span class="dot">✦</span></span>
-      <span class="marquee-item">SOLID Principles <span class="dot">✦</span></span>
-      <span class="marquee-item">IEEE Published <span class="dot">✦</span></span>
-      <span class="marquee-item">650+ LeetCode <span class="dot">✦</span></span>
-      <!-- dupe -->
-      <span class="marquee-item">Java <span class="dot">✦</span></span>
-      <span class="marquee-item">Spring Boot <span class="dot">✦</span></span>
-      <span class="marquee-item">C++ <span class="dot">✦</span></span>
-      <span class="marquee-item">Kubernetes <span class="dot">✦</span></span>
-      <span class="marquee-item">Jenkins <span class="dot">✦</span></span>
-      <span class="marquee-item">Microservices <span class="dot">✦</span></span>
-      <span class="marquee-item">React.js <span class="dot">✦</span></span>
-      <span class="marquee-item">PostgreSQL <span class="dot">✦</span></span>
-      <span class="marquee-item">Multithreading <span class="dot">✦</span></span>
-      <span class="marquee-item">SOLID Principles <span class="dot">✦</span></span>
-      <span class="marquee-item">IEEE Published <span class="dot">✦</span></span>
-      <span class="marquee-item">650+ LeetCode <span class="dot">✦</span></span>
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-img-col">
+    <div class="hero-img-wrap">
+      <picture>
+        <source srcset="harsh-goswami.webp" type="image/webp"/>
+        <img src="harsh-goswami.jpg" alt="Harsh Goswami" class="hero-photo" loading="eager" fetchpriority="high" decoding="async" onerror="this.closest('picture').style.display='none';this.closest('.hero-img-wrap').querySelector('.hero-photo-fallback').style.display='flex'"/>
+      </picture>
+      <div class="hero-photo-fallback">HG</div>
     </div>
   </div>
-
-  <!-- ── ABOUT ── -->
-  <section id="about">
-    <div class="section-wrap">
-      <span class="sec-eyebrow appear">About</span>
-      <div class="about-grid">
-
-        <div class="about-left">
-          <h2 class="sec-title appear">Focused on the<br>enterprise <em>backend</em>.</h2>
-          <div class="about-body appear">
-            <p>I build backend systems in <strong>Java and C++</strong> — Spring Boot microservices, gRPC and REST APIs,
-              and multithreaded services deployed across distributed teams at enterprise scale.</p>
-            <p>I work across the full backend stack — service-to-service communication via <strong>gRPC and
-                REST</strong>, async messaging, CI/CD pipelines, containerised deployments on
-              <strong>Kubernetes</strong>, and database design with SQL and NoSQL.</p>
-            <p>I thrive where <strong>clean code and SOLID principles</strong> dictate product success — and I stay
-              sharp with 650+ LeetCode problems and IEEE-published NLP research.</p>
-          </div>
-        </div>
-
-        <div class="about-right">
-          <div class="fact-card appear">
-            <span class="fk">Education</span>
-            <span class="fv">B.Tech CSE</span>
-            <span class="fv2">IIITM Gwalior</span>
-          </div>
-          <div class="fact-card appear">
-            <span class="fk">Location</span>
-            <span class="fv">Bangalore</span>
-            <span class="fv2">Karnataka · Hybrid</span>
-          </div>
-          <div class="fact-card appear">
-            <span class="fk">Domains</span>
-            <span class="fv">Telecom · Web</span>
-            <span class="fv2">4G · 5G · Distributed</span>
-          </div>
-          <div class="fact-card appear">
-            <span class="fk">LeetCode</span>
-            <span class="fv">650+ solved</span>
-            <span class="fv2">C++ · Java · MySQL</span>
-          </div>
-          <div class="fact-card appear">
-            <span class="fk">Research</span>
-            <span class="fv">IEEE 2023</span>
-            <span class="fv2">NLP · Semantic Analysis</span>
-          </div>
-          <div class="fact-card appear">
-            <span class="fk">Approach</span>
-            <span class="fv">SOLID · OOD</span>
-            <span class="fv2">Design Patterns · System Opt.</span>
-          </div>
-          <div class="fact-card fact-card--wide">
-            <span class="fk">Status</span>
-            <span class="fv live">● Open to backend engineering opportunities</span>
-          </div>
-        </div>
-
+  <div class="hero-info-col">
+    <div class="hero-pill-row">
+      <span class="hero-pill hero-pill--green">● Open to opportunities</span>
+      <span class="hero-pill hero-pill--purple">Bangalore · Hybrid</span>
+    </div>
+    <h1 class="hero-name">Harsh Goswami</h1>
+    <p class="hero-role">Software Engineer · <span class="hero-role-co">Rakuten Symphony</span></p>
+    <p class="hero-sub hero-sub--skills">Java · Spring Boot · Microservices · C++ · Docker · Kubernetes · CI/CD</p>
+    <p class="hero-sub hero-sub--creds">IIITM Gwalior &nbsp;·&nbsp; IEEE Published</p>
+    <div class="hero-btns">
+      <a href="#experience" class="btn-dark">View Experience ↗</a>
+      <a href="#contact" class="btn-light">Say hello</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num" id="hero-lc">0</span>
+        <span class="hero-stat-lbl">LeetCode solved</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3+</span>
+        <span class="hero-stat-lbl">Years at Rakuten</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">100+</span>
+        <span class="hero-stat-lbl">Bugs remediated</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">1</span>
+        <span class="hero-stat-lbl">IEEE publication</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── EXPERIENCE ── -->
-  <section id="experience">
-    <div class="section-wrap">
-      <span class="sec-eyebrow appear">Experience</span>
-      <h2 class="sec-title appear">Where I've worked.</h2>
-      <div class="exp-list">
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span class="marquee-item">Java <span class="dot">✦</span></span>
+    <span class="marquee-item">Spring Boot <span class="dot">✦</span></span>
+    <span class="marquee-item">C++ <span class="dot">✦</span></span>
+    <span class="marquee-item">Kubernetes <span class="dot">✦</span></span>
+    <span class="marquee-item">Jenkins <span class="dot">✦</span></span>
+    <span class="marquee-item">Microservices <span class="dot">✦</span></span>
+    <span class="marquee-item">React.js <span class="dot">✦</span></span>
+    <span class="marquee-item">PostgreSQL <span class="dot">✦</span></span>
+    <span class="marquee-item">Multithreading <span class="dot">✦</span></span>
+    <span class="marquee-item">SOLID Principles <span class="dot">✦</span></span>
+    <span class="marquee-item">IEEE Published <span class="dot">✦</span></span>
+    <span class="marquee-item">650+ LeetCode <span class="dot">✦</span></span>
+    <!-- dupe -->
+    <span class="marquee-item">Java <span class="dot">✦</span></span>
+    <span class="marquee-item">Spring Boot <span class="dot">✦</span></span>
+    <span class="marquee-item">C++ <span class="dot">✦</span></span>
+    <span class="marquee-item">Kubernetes <span class="dot">✦</span></span>
+    <span class="marquee-item">Jenkins <span class="dot">✦</span></span>
+    <span class="marquee-item">Microservices <span class="dot">✦</span></span>
+    <span class="marquee-item">React.js <span class="dot">✦</span></span>
+    <span class="marquee-item">PostgreSQL <span class="dot">✦</span></span>
+    <span class="marquee-item">Multithreading <span class="dot">✦</span></span>
+    <span class="marquee-item">SOLID Principles <span class="dot">✦</span></span>
+    <span class="marquee-item">IEEE Published <span class="dot">✦</span></span>
+    <span class="marquee-item">650+ LeetCode <span class="dot">✦</span></span>
+  </div>
+</div>
 
-        <!-- Rakuten Symphony -->
-        <div class="exp-card appear">
-          <div class="exp-left">
-            <div class="exp-logo">RS</div>
-            <div class="exp-spine"></div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-meta">
-              <div>
-                <div class="exp-company">Altiostar · Rakuten Symphony</div>
-                <div class="exp-role">Member of Technical Staff</div>
-              </div>
-              <div class="exp-right-meta">
-                <span class="exp-badge exp-badge--current">Current</span>
-                <span class="exp-period">May 2023 – Present · 3 yrs</span>
-                <span class="exp-loc">Bengaluru · Hybrid</span>
-              </div>
-            </div>
-            <p class="exp-desc">Engineered scalable backend architectures in Java, Spring Boot and C++ for 4G Mobility
-              Load Balancing (MLB) and 5G networks. Delivered critical features — <span class="exp-feat">LBIAC</span>,
-              <span class="exp-feat">Private IEs</span>, <span class="exp-feat">sgnb-add-reject timers</span>, and <span
-                class="exp-feat">5G Local Cache</span> — for major enterprise clients including
-              <strong>Drillisch</strong> and <strong>Rakuten Mobile</strong>.</p>
-            <ul class="exp-bullets">
-              <li>Orchestrated testing frameworks within Kubernetes via Jenkins and JFrog on Linux, driving a
-                <strong>45% increase</strong> in deployment efficiency and code reliability.</li>
-              <li>Remediated <strong>100+ high-severity bugs</strong> across client production branches, improving
-                system stability by 15% and performance by 30%.</li>
-              <li>Designed resilient REST APIs and microservices for real-time distributed telecom systems.</li>
-            </ul>
-            <div class="exp-tags">
-              <span class="exp-tag">Java</span>
-              <span class="exp-tag">C++</span>
-              <span class="exp-tag">Spring Boot</span>
-              <span class="exp-tag">Kubernetes</span>
-              <span class="exp-tag">Jenkins</span>
-              <span class="exp-tag">JFrog</span>
-              <span class="exp-tag">Linux</span>
-              <span class="exp-tag">4G/5G</span>
-              <span class="exp-tag">Microservices</span>
-              <span class="exp-tag">Docker</span>
-              <span class="exp-tag">CI/CD</span>
-            </div>
-          </div>
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">About</span>
+    <div class="about-grid">
+
+      <div class="about-left">
+        <h2 class="sec-title appear">Focused on the<br>enterprise <em>backend</em>.</h2>
+        <div class="about-body appear">
+          <p>I build backend systems in <strong>Java and C++</strong> — Spring Boot microservices, gRPC and REST APIs, and multithreaded services deployed at enterprise scale. At Rakuten Symphony I own features end-to-end: from design and implementation through code review, testing, and production deployment across client networks.</p>
+          <p>I work across the full backend stack — service-to-service communication via <strong>gRPC and REST</strong>, async messaging, observability with <strong>structured logging and metrics</strong>, CI/CD pipelines, and containerised deployments on <strong>Kubernetes</strong>. I regularly review peers' code and collaborate with cross-functional teams spanning firmware, infra, and client integration.</p>
+          <p>I thrive where <strong>clean code and SOLID principles</strong> dictate product success — and I stay sharp with 650+ LeetCode problems and IEEE-published NLP research.</p>
         </div>
-
-        <!-- Adamya Solutions -->
-        <div class="exp-card appear">
-          <div class="exp-left">
-            <div class="exp-logo">AS</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-meta">
-              <div>
-                <div class="exp-company">Adamya Solutions Pvt Ltd</div>
-                <div class="exp-role">Software Engineer Intern</div>
-              </div>
-              <div class="exp-right-meta">
-                <span class="exp-period">Jun 2022 – Jul 2022 · 2 mos</span>
-                <span class="exp-loc">Noida · Remote</span>
-              </div>
-            </div>
-            <p class="exp-desc">Led backend development for a landing website project, implemented API integrations, and
-              documented the app's architecture to improve team collaboration and project efficiency.</p>
-            <ul class="exp-bullets">
-              <li>Led backend development team, optimizing frontend functionality for enhanced UX.</li>
-              <li>Implemented features for various API calls ensuring seamless integration.</li>
-              <li>Documented architecture and development processes, improving team efficiency.</li>
-            </ul>
-            <div class="exp-tags">
-              <span class="exp-tag">Node.js</span>
-              <span class="exp-tag">Express</span>
-              <span class="exp-tag">REST APIs</span>
-              <span class="exp-tag">JavaScript</span>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- ── SKILLS ── -->
-  <section id="skills">
-    <div class="section-wrap">
-      <span class="sec-eyebrow appear">Tech Stack</span>
-      <h2 class="sec-title appear">Tools I build with.</h2>
-      <div class="sk-table">
-        <div class="sk-row appear">
-          <span class="sk-row-label">Languages</span>
-          <div class="sk-row-items">
-            <span class="sk-item sk-amber">Java</span>
-            <span class="sk-item sk-amber">C++</span>
-            <span class="sk-item sk-amber">JavaScript ES6+</span>
-          </div>
+      <div class="about-right">
+        <div class="fact-card appear">
+          <span class="fk">Education</span>
+          <span class="fv">B.Tech CSE</span>
+          <span class="fv2">IIITM Gwalior</span>
         </div>
-        <div class="sk-row appear">
-          <span class="sk-row-label">Backend</span>
-          <div class="sk-row-items">
-            <span class="sk-item sk-purple">Spring Boot</span>
-            <span class="sk-item sk-purple">Node.js</span>
-            <span class="sk-item sk-purple">Express</span>
-            <span class="sk-item sk-purple">RESTful APIs</span>
-            <span class="sk-item sk-purple">Kafka</span>
-            <span class="sk-item sk-purple">JDBC</span>
-          </div>
+        <div class="fact-card appear">
+          <span class="fk">Location</span>
+          <span class="fv">Bangalore</span>
+          <span class="fv2">Karnataka · Hybrid</span>
         </div>
-        <div class="sk-row appear">
-          <span class="sk-row-label">Frontend</span>
-          <div class="sk-row-items">
-            <span class="sk-item sk-sage">React.js</span>
-            <span class="sk-item sk-sage">Redux</span>
-            <span class="sk-item sk-sage">HTML5 / CSS3</span>
-            <span class="sk-item sk-sage">Tailwind CSS</span>
-            <span class="sk-item sk-sage">jQuery</span>
-            <span class="sk-item sk-sage">Material UI</span>
-            <span class="sk-item sk-sage">Modern Web</span>
-          </div>
+        <div class="fact-card appear">
+          <span class="fk">Domains</span>
+          <span class="fv">Telecom · Web</span>
+          <span class="fv2">4G · 5G · Distributed</span>
         </div>
-        <div class="sk-row appear">
-          <span class="sk-row-label">Database</span>
-          <div class="sk-row-items">
-            <span class="sk-item sk-terra">SQL</span>
-            <span class="sk-item sk-terra">PostgreSQL</span>
-            <span class="sk-item sk-terra">MongoDB</span>
-            <span class="sk-item sk-terra">Firebase</span>
-          </div>
+        <div class="fact-card appear">
+          <span class="fk">LeetCode</span>
+          <span class="fv">650+ solved</span>
+          <span class="fv2">C++ · Java · MySQL</span>
         </div>
-        <div class="sk-row appear">
-          <span class="sk-row-label">Platform & Tools</span>
-          <div class="sk-row-items">
-            <span class="sk-item sk-purple">Kubernetes</span>
-            <span class="sk-item sk-purple">Docker</span>
-            <span class="sk-item sk-purple">Jenkins</span>
-            <span class="sk-item sk-purple">JFrog</span>
-            <span class="sk-item sk-purple">Maven</span>
-            <span class="sk-item sk-purple">Linux</span>
-          </div>
+        <div class="fact-card appear">
+          <span class="fk">Research</span>
+          <span class="fv">IEEE 2023</span>
+          <span class="fv2">NLP · Semantic Analysis</span>
         </div>
-        <div class="sk-row appear">
-          <span class="sk-row-label">Concepts</span>
-          <div class="sk-row-items">
-            <span class="sk-item sk-sage">Multithreading</span>
-            <span class="sk-item sk-sage">OOD / SOLID</span>
-            <span class="sk-item sk-sage">Design Patterns</span>
-            <span class="sk-item sk-sage">System Optimization</span>
-            <span class="sk-item sk-sage">LLD</span>
-            <span class="sk-item sk-sage">HLD</span>
-            <span class="sk-item sk-sage">JUnit</span>
-            <span class="sk-item sk-sage">Logging</span>
-            <span class="sk-item sk-sage">Debugging</span>
+        <div class="fact-card appear">
+          <span class="fk">Approach</span>
+          <span class="fv">SOLID · OOD</span>
+          <span class="fv2">Design Patterns · System Opt.</span>
+        </div>
+        <div class="fact-card fact-card--wide">
+          <span class="fk">Status</span>
+          <span class="fv live">● Open to backend engineering opportunities</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">Experience</span>
+    <h2 class="sec-title appear">Where I've worked.</h2>
+    <div class="exp-list">
+
+      <!-- Rakuten Symphony -->
+      <div class="exp-card appear">
+        <div class="exp-left">
+          <div class="exp-logo">RS</div>
+          <div class="exp-spine"></div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-meta">
+            <div>
+              <div class="exp-company">Altiostar · Rakuten Symphony</div>
+              <div class="exp-role">Member of Technical Staff</div>
+            </div>
+            <div class="exp-right-meta">
+              <span class="exp-badge exp-badge--current">Current</span>
+              <span class="exp-period">May 2023 – Present · 3 yrs</span>
+              <span class="exp-loc">Bengaluru · Hybrid</span>
+            </div>
+          </div>
+          <p class="exp-desc">Engineered scalable backend architectures in Java, Spring Boot and C++ for 4G Mobility Load Balancing (MLB) and 5G networks. Delivered critical features — <span class="exp-feat">LBIAC</span>, <span class="exp-feat">Private IEs</span>, <span class="exp-feat">sgnb-add-reject timers</span>, and <span class="exp-feat">5G Local Cache</span> — for major enterprise clients including <strong>Drillisch</strong> and <strong>Rakuten Mobile</strong>.</p>
+          <ul class="exp-bullets">
+            <li>Orchestrated testing frameworks within Kubernetes via Jenkins and JFrog on Linux, driving a <strong>45% increase</strong> in deployment efficiency and code reliability.</li>
+            <li>Remediated <strong>100+ high-severity bugs</strong> across client production branches, improving system stability by 15% and performance by 30%.</li>
+            <li>Designed resilient REST APIs and microservices for real-time distributed telecom systems.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">C++</span>
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">Kubernetes</span>
+            <span class="exp-tag">Jenkins</span>
+            <span class="exp-tag">JFrog</span>
+            <span class="exp-tag">Linux</span>
+            <span class="exp-tag">4G/5G</span>
+            <span class="exp-tag">Microservices</span>
+            <span class="exp-tag">Docker</span>
+            <span class="exp-tag">CI/CD</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ── PROJECTS – PINTEREST MASONRY ── -->
-  <section id="projects">
-    <div class="section-wrap">
-      <span class="sec-eyebrow appear">Projects</span>
-      <h2 class="sec-title appear">Things I've shipped.</h2>
-      <div class="masonry">
-
-        <!-- 1 -->
-        <div class="pin">
-          <div class="pin-bar amber"></div>
-          <div class="pin-emoji">
-            <div class="pin-emoji-bg amber"></div>
-            <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" />
-                <path d="M8 21h8M12 17v4" />
-                <path d="M7 8l2 2-2 2M13 10h3" /></svg></span>
-          </div>
-          <div class="pin-body">
-            <p class="pin-period">May 2026 – Jun 2026 · Featured</p>
-            <h3 class="pin-title">Movie Caching Engine</h3>
-            <p class="pin-desc">Production-grade in-memory CMS with multi-level <span class="pin-hi">LRU L1 + LFU
-                L2</span> caching. All operations <span class="pin-hi">O(1)</span>. Facade, Strategy &amp; Chain of
-              Responsibility patterns. Regex-powered CLI for complex queries.</p>
-            <div class="pin-tags">
-              <span class="pin-tag">Java</span>
-              <span class="pin-tag">LRU/LFU</span>
-              <span class="pin-tag">Design Patterns</span>
-              <span class="pin-tag">OOP</span>
-              <span class="pin-tag">JUnit</span>
-            </div>
-            <div class="pin-footer">
-              <a href="https://github.com/harsh3055/movie-caching-engine" target="_blank" class="pin-link">GitHub</a>
-              <span class="pin-date">2026</span>
-            </div>
-          </div>
+      <!-- Adamya Solutions -->
+      <div class="exp-card appear">
+        <div class="exp-left">
+          <div class="exp-logo">AS</div>
         </div>
-
-        <!-- 2 -->
-        <div class="pin">
-          <div class="pin-bar terra"></div>
-          <div class="pin-emoji">
-            <div class="pin-emoji-bg terra"></div>
-            <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="6" width="20" height="12" rx="4" />
-                <path d="M6 12h4M8 10v4" />
-                <circle cx="15" cy="11" r="1" fill="currentColor" />
-                <circle cx="17" cy="13" r="1" fill="currentColor" /></svg></span>
-          </div>
-          <div class="pin-body">
-            <p class="pin-period">Nov – Dec 2024</p>
-            <h3 class="pin-title">Multiplayer Pong</h3>
-            <p class="pin-desc">Two-player Pong in C++ with raylib. Realistic ball physics — speed &amp; angle
-              adjustments per collision. Vibrant UI with responsive frame rates.</p>
-            <div class="pin-tags">
-              <span class="pin-tag">C++</span>
-              <span class="pin-tag">raylib</span>
-              <span class="pin-tag">Game Physics</span>
+        <div class="exp-body">
+          <div class="exp-meta">
+            <div>
+              <div class="exp-company">Adamya Solutions Pvt Ltd</div>
+              <div class="exp-role">Software Engineer Intern</div>
             </div>
-            <div class="pin-footer">
-              <a href="https://github.com/harsh3055/Multiplayer-Pong" target="_blank" class="pin-link">GitHub</a>
-              <span class="pin-date">2024</span>
+            <div class="exp-right-meta">
+              <span class="exp-period">Jun 2022 – Jul 2022 · 2 mos</span>
+              <span class="exp-loc">Noida · Remote</span>
             </div>
           </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="pin">
-          <div class="pin-bar lavender"></div>
-          <div class="pin-emoji">
-            <div class="pin-emoji-bg lavender"></div>
-            <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>
-          </div>
-          <div class="pin-body">
-            <p class="pin-period">Jul – Sep 2022</p>
-            <h3 class="pin-title">Happy Times</h3>
-            <p class="pin-desc">MERN social platform for sharing happy moments with photos, tags, likes &amp; comments.
-              <span class="pin-hi">10% better data retrieval</span>, <span class="pin-hi">15% API efficiency</span>
-              gain. Redux Thunk state management.</p>
-            <div class="pin-tags">
-              <span class="pin-tag">React.js</span>
-              <span class="pin-tag">Node.js</span>
-              <span class="pin-tag">MongoDB</span>
-              <span class="pin-tag">Redux</span>
-            </div>
-            <div class="pin-footer">
-              <a href="https://github.com/harsh3055/Happy_times" target="_blank" class="pin-link">GitHub</a>
-              <span class="pin-date">2022</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="pin">
-          <div class="pin-bar sage"></div>
-          <div class="pin-emoji">
-            <div class="pin-emoji-bg sage"></div>
-            <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-                <path d="M11 8v6M8 11h6" /></svg></span>
-          </div>
-          <div class="pin-body">
-            <p class="pin-period">Aug – Dec 2021</p>
-            <h3 class="pin-title">Buddy Finder</h3>
-            <p class="pin-desc">Web app for finding study partners via cluster maps. Create and join study hubs. <span
-                class="pin-hi">50% faster image loads</span> via Cloudinary. Deployed on Heroku with MongoDB Atlas.</p>
-            <div class="pin-tags">
-              <span class="pin-tag">MongoDB Atlas</span>
-              <span class="pin-tag">Cloudinary</span>
-              <span class="pin-tag">Express.js</span>
-              <span class="pin-tag">Heroku</span>
-            </div>
-            <div class="pin-footer">
-              <a href="https://github.com/harsh3055/Buddy-Finder" target="_blank" class="pin-link">GitHub</a>
-              <span class="pin-date">2021</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="pin">
-          <div class="pin-bar amber"></div>
-          <div class="pin-emoji">
-            <div class="pin-emoji-bg amber"></div>
-            <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" /></svg></span>
-          </div>
-          <div class="pin-body">
-            <p class="pin-period">Jan – Mar 2021</p>
-            <h3 class="pin-title">Hostel Complaint System</h3>
-            <p class="pin-desc">Complaint management platform with separate student and admin portals. Firebase Auth for
-              secure login, Realtime DB for live tracking. <span class="pin-hi">35% faster page loads</span>.</p>
-            <div class="pin-tags">
-              <span class="pin-tag">Firebase</span>
-              <span class="pin-tag">Realtime DB</span>
-              <span class="pin-tag">Bootstrap</span>
-              <span class="pin-tag">JavaScript</span>
-            </div>
-            <div class="pin-footer">
-              <a href="https://github.com/harsh3055/Hostel-Complaint-Management-System" target="_blank"
-                class="pin-link">GitHub</a>
-              <span class="pin-date">2021</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="pin">
-          <div class="pin-bar lavender"></div>
-          <div class="pin-emoji">
-            <div class="pin-emoji-bg lavender"></div>
-            <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="14" rx="2" />
-                <path d="M2 10h20" />
-                <path d="M7 18v2M17 18v2" />
-                <circle cx="7" cy="15" r="1" fill="currentColor" />
-                <circle cx="17" cy="15" r="1" fill="currentColor" /></svg></span>
-          </div>
-          <div class="pin-body">
-            <p class="pin-period">Academic Project</p>
-            <h3 class="pin-title">Bus Management System</h3>
-            <p class="pin-desc">C++ console application for bus operations. Book seats, check arrival and departure
-              schedules. Strong OOP and file-handling fundamentals.</p>
-            <div class="pin-tags">
-              <span class="pin-tag">C++</span>
-              <span class="pin-tag">OOP</span>
-              <span class="pin-tag">File I/O</span>
-            </div>
-            <div class="pin-footer">
-              <a href="https://github.com/harsh3055/Bus_Management_System" target="_blank" class="pin-link">GitHub</a>
-              <span class="pin-date">Academic</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── RESEARCH ── -->
-  <section id="research">
-    <div class="section-wrap">
-      <span class="sec-eyebrow appear">Research</span>
-      <h2 class="sec-title appear">Published work.</h2>
-      <div class="pub-card appear">
-        <div class="pub-main">
-          <div class="pub-badge">IEEE · December 7, 2023</div>
-          <h3 class="pub-title-text">Polarity Prediction Using Automatic Semantic Analysis on User Comments</h3>
-          <p class="pub-abstract">Gauging the quality of a video or post by inspecting user comments is challenging at
-            scale. This paper explores how deep-learning models — CNNs and LSTM networks — can perform polarity analysis
-            on collections of comments and automatically assign polarity scores, enabling automated content quality
-            assessment.</p>
-          <div class="pub-pills">
-            <span class="pub-pill">Deep Learning</span>
-            <span class="pub-pill">CNN</span>
-            <span class="pub-pill">LSTM</span>
-            <span class="pub-pill">NLP</span>
-            <span class="pub-pill">Semantic Analysis</span>
-            <span class="pub-pill">Polarity Prediction</span>
-          </div>
-          <a href="https://ieeexplore.ieee.org/document/10464939" target="_blank" class="pub-action">Read on IEEE
-            Xplore</a>
-        </div>
-        <div class="pub-aside">
-          <div>
-            <div class="pa-label">Publisher</div>
-            <div class="pa-val">IEEE</div>
-          </div>
-          <div>
-            <div class="pa-label">Year</div>
-            <div class="pa-val">2023</div>
-          </div>
-          <div>
-            <div class="pa-label">Domain</div>
-            <div class="pa-val">NLP</div>
+          <p class="exp-desc">Led backend development for a landing website project, implemented API integrations, and documented the app's architecture to improve team collaboration and project efficiency.</p>
+          <ul class="exp-bullets">
+            <li>Led backend development team, optimizing frontend functionality for enhanced UX.</li>
+            <li>Implemented features for various API calls ensuring seamless integration.</li>
+            <li>Documented architecture and development processes, improving team efficiency.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Node.js</span>
+            <span class="exp-tag">Express</span>
+            <span class="exp-tag">REST APIs</span>
+            <span class="exp-tag">JavaScript</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ── LEETCODE ── -->
-  <section id="leetcode">
-    <div class="section-wrap">
-      <span class="sec-eyebrow appear">Competitive Programming</span>
-      <h2 class="sec-title appear">LeetCode stats.</h2>
-      <div class="lc-layout">
-        <div class="lc-card appear">
-          <div class="lc-big" id="lc-count">0</div>
-          <div class="lc-sub">Problems Solved</div>
-          <div class="lc-diff-row">
-            <div class="lc-diff-card e">
-              <span class="lc-diff-num">468</span>
-              <span class="lc-diff-lbl">Easy</span>
-            </div>
-            <div class="lc-diff-card m">
-              <span class="lc-diff-num">143</span>
-              <span class="lc-diff-lbl">Medium</span>
-            </div>
-            <div class="lc-diff-card h">
-              <span class="lc-diff-num">39</span>
-              <span class="lc-diff-lbl">Hard</span>
-            </div>
-          </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">Tech Stack</span>
+    <h2 class="sec-title appear">Tools I build with.</h2>
+    <div class="sk-table">
+      <div class="sk-row appear">
+        <span class="sk-row-label">Languages</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-amber">Java</span>
+          <span class="sk-item sk-amber">C++</span>
+          <span class="sk-item sk-amber">JavaScript ES6+</span>
         </div>
-        <div class="lc-card appear">
-          <div class="lang-strip">
-            <div class="ls-cell">
-              <div class="ls-n">571</div>
-              <div class="ls-l">C++</div>
-            </div>
-            <div class="ls-cell">
-              <div class="ls-n">155</div>
-              <div class="ls-l">Java</div>
-            </div>
-            <div class="ls-cell">
-              <div class="ls-n">14</div>
-              <div class="ls-l">MySQL</div>
-            </div>
-          </div>
-          <div class="tp-head">Topic Strengths</div>
-          <div class="tp-wrap">
-            <span class="tp a">DP ×112</span>
-            <span class="tp a">Backtracking ×30</span>
-            <span class="tp a">Union-Find ×28</span>
-            <span class="tp i">Hash Table ×136</span>
-            <span class="tp i">Math ×88</span>
-            <span class="tp i">DFS ×72</span>
-            <span class="tp f">Array ×353</span>
-            <span class="tp f">String ×130</span>
-            <span class="tp f">Sorting ×85</span>
-            <span class="tp f">Two Pointers ×56</span>
-            <span class="tp f">Matrix ×49</span>
-            <span class="tp f">Stack ×36</span>
-            <span class="tp f">Linked List ×32</span>
-          </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Backend</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-purple">Spring Boot</span>
+          <span class="sk-item sk-purple">Node.js</span>
+          <span class="sk-item sk-purple">Express</span>
+          <span class="sk-item sk-purple">RESTful APIs</span>
+          <span class="sk-item sk-purple">Kafka</span>
+          <span class="sk-item sk-purple">JDBC</span>
+        </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Frontend</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-sage">React.js</span>
+          <span class="sk-item sk-sage">Redux</span>
+          <span class="sk-item sk-sage">HTML5 / CSS3</span>
+          <span class="sk-item sk-sage">Tailwind CSS</span>
+          <span class="sk-item sk-sage">jQuery</span>
+          <span class="sk-item sk-sage">Material UI</span>
+          <span class="sk-item sk-sage">Modern Web</span>
+        </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Database</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-terra">SQL</span>
+          <span class="sk-item sk-terra">PostgreSQL</span>
+          <span class="sk-item sk-terra">MongoDB</span>
+          <span class="sk-item sk-terra">Firebase</span>
+        </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Platform & Tools</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-purple">Kubernetes</span>
+          <span class="sk-item sk-purple">Docker</span>
+          <span class="sk-item sk-purple">Jenkins</span>
+          <span class="sk-item sk-purple">JFrog</span>
+          <span class="sk-item sk-purple">Maven</span>
+          <span class="sk-item sk-purple">Linux</span>
+          <span class="sk-item sk-purple">Git</span>
+        </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Observability</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-amber">Prometheus</span>
+          <span class="sk-item sk-amber">Grafana</span>
+          <span class="sk-item sk-amber">Structured Logging</span>
+          <span class="sk-item sk-amber">Distributed Tracing</span>
+        </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Security</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-terra">OAuth 2.0</span>
+          <span class="sk-item sk-terra">JWT</span>
+          <span class="sk-item sk-terra">Spring Security</span>
+        </div>
+      </div>
+      <div class="sk-row appear">
+        <span class="sk-row-label">Concepts</span>
+        <div class="sk-row-items">
+          <span class="sk-item sk-sage">Multithreading</span>
+          <span class="sk-item sk-sage">OOD / SOLID</span>
+          <span class="sk-item sk-sage">Design Patterns</span>
+          <span class="sk-item sk-sage">System Optimization</span>
+          <span class="sk-item sk-sage">LLD</span>
+          <span class="sk-item sk-sage">HLD</span>
+          <span class="sk-item sk-sage">Java 21 / Virtual Threads</span>
+          <span class="sk-item sk-sage">JUnit</span>
+          <span class="sk-item sk-sage">Logging</span>
+          <span class="sk-item sk-sage">Debugging</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── CONTACT ── -->
-  <section id="contact">
-    <div class="contact-inner">
-      <span class="sec-eyebrow appear">Contact</span>
-      <div class="contact-grid">
-        <div class="contact-left">
-          <h2 class="sec-title appear">Let's build<br>something <em>great</em>.</h2>
-          <p>Open to discussing complex backend architectures, distributed systems, or challenging full-stack
-            opportunities. I reply fast.</p>
-          <div class="link-list">
-            <a href="mailto:harsh.goswami3054@gmail.com" class="c-link c-link--email appear">
-              <div class="cl-left">
-                <div class="cl-ico">
-                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
-                </div>
-                <div>
-                  <div class="cl-name">Email</div>
-                  <div class="cl-handle">harsh.goswami3054@gmail.com</div>
-                </div>
-              </div>
-              <span class="cl-arr">↗</span>
-            </a>
-            <a href="https://github.com/harsh3055" target="_blank" class="c-link appear">
-              <div class="cl-left">
-                <div class="cl-ico">
-                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
-                    </svg>
-                </div>
-                <div>
-                  <div class="cl-name">GitHub</div>
-                  <div class="cl-handle">github.com/harsh3055</div>
-                </div>
-              </div>
-              <span class="cl-arr">↗</span>
-            </a>
-            <a href="https://linkedin.com/in/harshgoswami27" target="_blank" class="c-link appear">
-              <div class="cl-left">
-                <div class="cl-ico">
-                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                    <circle cx="4" cy="4" r="2" /></svg>
-                </div>
-                <div>
-                  <div class="cl-name">LinkedIn</div>
-                  <div class="cl-handle">harshgoswami27</div>
-                </div>
-              </div>
-              <span class="cl-arr">↗</span>
-            </a>
-            <a href="https://leetcode.com/u/octothorpe27/" target="_blank" class="c-link appear">
-              <div class="cl-left">
-                <div class="cl-ico" style="font-size:.85rem;font-weight:800;color:#ea580c;">LC</div>
-                <div>
-                  <div class="cl-name">LeetCode</div>
-                  <div class="cl-handle">octothorpe27</div>
-                </div>
-              </div>
-              <span class="cl-arr">↗</span>
-            </a>
-          </div>
+<!-- ── PROJECTS – PINTEREST MASONRY ── -->
+<section id="projects">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">Projects</span>
+    <h2 class="sec-title appear">Things I've shipped.</h2>
+    <div class="masonry">
+
+      <!-- 1 -->
+      <div class="pin">
+        <div class="pin-bar amber"></div>
+        <div class="pin-emoji">
+          <div class="pin-emoji-bg amber"></div>
+          <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8l2 2-2 2M13 10h3"/></svg></span>
         </div>
-        <div class="contact-right appear">
-          <div class="otw-card">
-            <div class="otw-pulse"><span class="otw-dot"></span>Open to opportunities</div>
-            <div class="otw-title">Backend engineering roles in distributed systems.</div>
-            <div class="otw-sub">Looking for teams that care about clean architecture, SOLID principles, and meaningful
-              engineering challenges. Let's talk.</div>
-            <div class="otw-skills">
-              <span class="otw-skill">Java</span>
-              <span class="otw-skill">Spring Boot</span>
-              <span class="otw-skill">Microservices</span>
-              <span class="otw-skill">Kubernetes</span>
-              <span class="otw-skill">System Design</span>
-              <span class="otw-skill">C++</span>
-              <span class="otw-skill">Docker</span>
-              <span class="otw-skill">CI/CD</span>
-              <span class="otw-skill">JUnit</span>
-              <span class="otw-skill">PostgreSQL</span>
-            </div>
-            <a href="https://linkedin.com/in/harshgoswami27" target="_blank" class="otw-btn">Get in touch ↗</a>
+        <div class="pin-body">
+          <p class="pin-period">May 2026 – Jun 2026 · Featured</p>
+          <h3 class="pin-title">Movie Caching Engine</h3>
+          <p class="pin-desc">A single eviction policy fails under mixed access patterns — LRU thrashes on frequency-skewed workloads, LFU on recency-skewed ones. Designed a <span class="pin-hi">two-tier strategy</span>: LRU at L1 for hot recency bias, LFU at L2 as a frequency-weighted fallback. Enforced <span class="pin-hi">O(1) on all ops</span> via doubly-linked list + HashMap. Applied Facade, Strategy &amp; Chain of Responsibility to keep eviction policy swappable without touching core logic. Validated under concurrent load with JUnit.</p>
+          <div class="pin-tags">
+            <span class="pin-tag">Java</span>
+            <span class="pin-tag">LRU/LFU</span>
+            <span class="pin-tag">Design Patterns</span>
+            <span class="pin-tag">OOP</span>
+            <span class="pin-tag">JUnit</span>
+          </div>
+          <div class="pin-footer">
+            <a href="https://github.com/harsh3055/movie-caching-engine" target="_blank" class="pin-link">GitHub</a>
+            <span class="pin-date">2026</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <span class="foot-l">© 2026 Harsh Goswami · All rights reserved</span>
-    <div class="foot-r">
-      <a href="https://github.com/harsh3055" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/harshgoswami27" target="_blank">LinkedIn</a>
-      <a href="https://ieeexplore.ieee.org/document/10464939" target="_blank">IEEE</a>
-    </div>
-  </footer>
+      <!-- 2 — LBIAC -->
+      <div class="pin pin--work">
+        <div class="pin-bar sage"></div>
+        <div class="pin-emoji">
+          <div class="pin-emoji-bg sage"></div>
+          <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></span>
+        </div>
+        <div class="pin-body">
+          <p class="pin-period">Rakuten Symphony · Production · 2023–Present</p>
+          <h3 class="pin-title">4G Load Balancing — LBIAC</h3>
+          <p class="pin-desc">When a cell becomes congested, naive offloading causes interference across neighbors. Implemented <span class="pin-hi">LBIAC</span> — a 3GPP X2AP inter-eNB coordination protocol — using a <span class="pin-hi">5-state FSM (L0–L4)</span> tracking DL PRB and time-domain load independently. Each of 32 neighbor cells runs its own nested state machine through measurement request → response → periodic update, with configurable backoff timers preventing hammering unresponsive peers. Deployed for <strong>Drillisch</strong> and <strong>Rakuten Mobile</strong> production networks.</p>
+          <div class="pin-tags">
+            <span class="pin-tag">C++</span>
+            <span class="pin-tag">Java</span>
+            <span class="pin-tag">3GPP X2AP</span>
+            <span class="pin-tag">FSM</span>
+            <span class="pin-tag">4G LTE</span>
+            <span class="pin-tag">Distributed Systems</span>
+          </div>
+          <div class="pin-footer">
+            <span class="pin-work-badge">Production</span>
+            <span class="pin-date">Rakuten Symphony</span>
+          </div>
+        </div>
+      </div>
 
-  <script src="main.min.js" defer></script>
+      <!-- 3 — Private IEs -->
+      <div class="pin pin--work">
+        <div class="pin-bar lavender"></div>
+        <div class="pin-emoji">
+          <div class="pin-emoji-bg lavender"></div>
+          <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        </div>
+        <div class="pin-body">
+          <p class="pin-period">Rakuten Symphony · Production · 2023–Present</p>
+          <h3 class="pin-title">X2AP Private IEs — Overload Stability</h3>
+          <p class="pin-desc">Standard 3GPP stop-reporting on overload causes <span class="pin-hi">signaling thrash</span> — load oscillates around the threshold, restarting the resource status procedure repeatedly. Designed vendor-specific <span class="pin-hi">Private IEs</span> extending the X2AP Resource Status Update: a configurable <span class="pin-hi">pause indicator</span> (vs hard stop) with a 14,400s countdown. Source and target sides manage asymmetric timer state — pause on sender, backoff-aware countdown on receiver — with graceful fallback for peers that only support standard 3GPP. Eliminated oscillation without sacrificing recovery responsiveness.</p>
+          <div class="pin-tags">
+            <span class="pin-tag">C++</span>
+            <span class="pin-tag">X2AP</span>
+            <span class="pin-tag">3GPP</span>
+            <span class="pin-tag">Protocol Design</span>
+            <span class="pin-tag">State Machine</span>
+            <span class="pin-tag">Telecom</span>
+          </div>
+          <div class="pin-footer">
+            <span class="pin-work-badge">Production</span>
+            <span class="pin-date">Rakuten Symphony</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="pin">
+        <div class="pin-bar terra"></div>
+        <div class="pin-emoji">
+          <div class="pin-emoji-bg terra"></div>
+          <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4"/><circle cx="15" cy="11" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/></svg></span>
+        </div>
+        <div class="pin-body">
+          <p class="pin-period">Nov – Dec 2024</p>
+          <h3 class="pin-title">Multiplayer Pong</h3>
+          <p class="pin-desc">Built to explore deterministic physics in a tight game loop. Ball velocity is decomposed into vector components on each collision — angle and speed recalculated from paddle contact position rather than simple reflection, so edge hits produce shallower angles and center hits produce steeper ones. Ran the render and physics tick at the same rate to avoid drift between visual state and game state.</p>
+          <div class="pin-tags">
+            <span class="pin-tag">C++</span>
+            <span class="pin-tag">raylib</span>
+            <span class="pin-tag">Game Physics</span>
+          </div>
+          <div class="pin-footer">
+            <a href="https://github.com/harsh3055/Multiplayer-Pong" target="_blank" class="pin-link">GitHub</a>
+            <span class="pin-date">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="pin">
+        <div class="pin-bar lavender"></div>
+        <div class="pin-emoji">
+          <div class="pin-emoji-bg lavender"></div>
+          <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        </div>
+        <div class="pin-body">
+          <p class="pin-period">Jul – Sep 2022</p>
+          <h3 class="pin-title">Happy Times</h3>
+          <p class="pin-desc">Social feed where every action — like, comment, tag — hits the API and updates shared state across clients. Chose <span class="pin-hi">Redux Thunk</span> over Context API to handle async side-effects predictably and keep UI state consistent under rapid interactions. MongoDB indexes on tags and user ID brought <span class="pin-hi">query time down 10%</span>; batching redundant API calls cut round-trips by <span class="pin-hi">15%</span>.</p>
+          <div class="pin-tags">
+            <span class="pin-tag">React.js</span>
+            <span class="pin-tag">Node.js</span>
+            <span class="pin-tag">MongoDB</span>
+            <span class="pin-tag">Redux</span>
+          </div>
+          <div class="pin-footer">
+            <a href="https://github.com/harsh3055/Happy_times" target="_blank" class="pin-link">GitHub</a>
+            <span class="pin-date">2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="pin">
+        <div class="pin-bar sage"></div>
+        <div class="pin-emoji">
+          <div class="pin-emoji-bg sage"></div>
+          <span class="pin-emoji-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+        </div>
+        <div class="pin-body">
+          <p class="pin-period">Aug – Dec 2021</p>
+          <h3 class="pin-title">Buddy Finder</h3>
+          <p class="pin-desc">The main UX challenge was showing study hubs geographically without hammering the DB on every map pan. Solved it with cluster-level aggregation — fetching hub metadata per viewport bounds rather than all records. Offloaded image storage to <span class="pin-hi">Cloudinary</span> with on-upload transforms, cutting page weight and dropping load time by <span class="pin-hi">50%</span> vs. self-hosting raw uploads.</p>
+          <div class="pin-tags">
+            <span class="pin-tag">MongoDB Atlas</span>
+            <span class="pin-tag">Cloudinary</span>
+            <span class="pin-tag">Express.js</span>
+            <span class="pin-tag">Heroku</span>
+          </div>
+          <div class="pin-footer">
+            <a href="https://github.com/harsh3055/Buddy-Finder" target="_blank" class="pin-link">GitHub</a>
+            <span class="pin-date">2021</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH ── -->
+<section id="research">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">Research</span>
+    <h2 class="sec-title appear">Published work.</h2>
+    <div class="pub-card appear">
+      <div class="pub-main">
+        <div class="pub-badge">IEEE · December 7, 2023</div>
+        <h3 class="pub-title-text">Polarity Prediction Using Automatic Semantic Analysis on User Comments</h3>
+        <p class="pub-abstract">Gauging the quality of a video or post by inspecting user comments is challenging at scale. This paper explores how deep-learning models — CNNs and LSTM networks — can perform polarity analysis on collections of comments and automatically assign polarity scores, enabling automated content quality assessment.</p>
+        <div class="pub-pills">
+          <span class="pub-pill">Deep Learning</span>
+          <span class="pub-pill">CNN</span>
+          <span class="pub-pill">LSTM</span>
+          <span class="pub-pill">NLP</span>
+          <span class="pub-pill">Semantic Analysis</span>
+          <span class="pub-pill">Polarity Prediction</span>
+        </div>
+        <a href="https://ieeexplore.ieee.org/document/10464939" target="_blank" class="pub-action">Read on IEEE Xplore</a>
+      </div>
+      <div class="pub-aside">
+        <div>
+          <div class="pa-label">Publisher</div>
+          <div class="pa-val">IEEE</div>
+        </div>
+        <div>
+          <div class="pa-label">Year</div>
+          <div class="pa-val">2023</div>
+        </div>
+        <div>
+          <div class="pa-label">Domain</div>
+          <div class="pa-val">NLP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEETCODE ── -->
+<section id="leetcode">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">Competitive Programming</span>
+    <h2 class="sec-title appear">LeetCode stats.</h2>
+    <div class="lc-layout">
+      <div class="lc-card appear">
+        <div class="lc-big" id="lc-count">0</div>
+        <div class="lc-sub">Problems Solved</div>
+        <div class="lc-diff-row">
+          <div class="lc-diff-card e">
+            <span class="lc-diff-num">468</span>
+            <span class="lc-diff-lbl">Easy</span>
+          </div>
+          <div class="lc-diff-card m">
+            <span class="lc-diff-num">143</span>
+            <span class="lc-diff-lbl">Medium</span>
+          </div>
+          <div class="lc-diff-card h">
+            <span class="lc-diff-num">39</span>
+            <span class="lc-diff-lbl">Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="lc-card appear">
+        <div class="lang-strip">
+          <div class="ls-cell"><div class="ls-n">571</div><div class="ls-l">C++</div></div>
+          <div class="ls-cell"><div class="ls-n">155</div><div class="ls-l">Java</div></div>
+          <div class="ls-cell"><div class="ls-n">14</div><div class="ls-l">MySQL</div></div>
+        </div>
+        <div class="tp-head">Topic Strengths</div>
+        <div class="tp-wrap">
+          <span class="tp a">DP ×112</span>
+          <span class="tp a">Backtracking ×30</span>
+          <span class="tp a">Union-Find ×28</span>
+          <span class="tp i">Hash Table ×136</span>
+          <span class="tp i">Math ×88</span>
+          <span class="tp i">DFS ×72</span>
+          <span class="tp f">Array ×353</span>
+          <span class="tp f">String ×130</span>
+          <span class="tp f">Sorting ×85</span>
+          <span class="tp f">Two Pointers ×56</span>
+          <span class="tp f">Matrix ×49</span>
+          <span class="tp f">Stack ×36</span>
+          <span class="tp f">Linked List ×32</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+  <div class="section-wrap">
+    <span class="sec-eyebrow appear">Credentials</span>
+    <h2 class="sec-title appear">Certifications.</h2>
+    <div class="cert-grid">
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">Microsoft</span>
+            <span class="cert-dot">·</span>
+            <span class="cert-badge cert-badge--azure">AZ-900</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">The Web Developer Bootcamp</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-dot">·</span>
+            <span class="cert-year">2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">Divide &amp; Conquer, Sorting &amp; Searching, and Randomized Algorithms</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">Coursera</span>
+            <span class="cert-dot">·</span>
+            <span class="cert-badge cert-badge--coursera">Stanford</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">Designing RESTful APIs</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">LinkedIn Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">Java Object-Oriented Programming</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">LinkedIn Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">Git Workflows</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">LinkedIn Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card appear">
+        <div class="cert-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="cert-body">
+          <div class="cert-name">Java (Basic)</div>
+          <div class="cert-meta">
+            <span class="cert-issuer">HackerRank</span>
+            <span class="cert-dot">·</span>
+            <span class="cert-badge cert-badge--hr">Verified</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-inner">
+    <span class="sec-eyebrow appear">Contact</span>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2 class="sec-title appear">Let's build<br>something <em>great</em>.</h2>
+        <p>Open to discussing complex backend architectures, distributed systems, or challenging full-stack opportunities. I reply fast.</p>
+        <div class="link-list">
+          <a href="mailto:harsh.goswami3054@gmail.com" class="c-link c-link--email appear">
+            <div class="cl-left">
+              <div class="cl-ico">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div><div class="cl-name">Email</div><div class="cl-handle">harsh.goswami3054@gmail.com</div></div>
+            </div>
+            <span class="cl-arr">↗</span>
+          </a>
+          <a href="https://github.com/harsh3055" target="_blank" class="c-link appear">
+            <div class="cl-left">
+              <div class="cl-ico">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+              </div>
+              <div><div class="cl-name">GitHub</div><div class="cl-handle">github.com/harsh3055</div></div>
+            </div>
+            <span class="cl-arr">↗</span>
+          </a>
+          <a href="https://linkedin.com/in/harshgoswami27" target="_blank" class="c-link appear">
+            <div class="cl-left">
+              <div class="cl-ico">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div><div class="cl-name">LinkedIn</div><div class="cl-handle">harshgoswami27</div></div>
+            </div>
+            <span class="cl-arr">↗</span>
+          </a>
+          <a href="https://leetcode.com/u/octothorpe27/" target="_blank" class="c-link appear">
+            <div class="cl-left">
+              <div class="cl-ico" style="font-size:.85rem;font-weight:800;color:#ea580c;">LC</div>
+              <div><div class="cl-name">LeetCode</div><div class="cl-handle">octothorpe27</div></div>
+            </div>
+            <span class="cl-arr">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right appear">
+        <div class="otw-card">
+          <div class="otw-pulse"><span class="otw-dot"></span>Open to opportunities</div>
+          <div class="otw-title">Backend engineering roles in distributed systems.</div>
+          <div class="otw-sub">Looking for teams that care about clean architecture, SOLID principles, and meaningful engineering challenges. Let's talk.</div>
+          <div class="otw-skills">
+            <span class="otw-skill">Java</span>
+            <span class="otw-skill">Spring Boot</span>
+            <span class="otw-skill">Microservices</span>
+            <span class="otw-skill">Kubernetes</span>
+            <span class="otw-skill">System Design</span>
+            <span class="otw-skill">C++</span>
+            <span class="otw-skill">Docker</span>
+            <span class="otw-skill">CI/CD</span>
+            <span class="otw-skill">JUnit</span>
+            <span class="otw-skill">PostgreSQL</span>
+          </div>
+          <a href="https://linkedin.com/in/harshgoswami27" target="_blank" class="otw-btn">Get in touch ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="foot-l">© 2026 Harsh Goswami · All rights reserved</span>
+  <div class="foot-r">
+    <a href="https://github.com/harsh3055" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/harshgoswami27" target="_blank">LinkedIn</a>
+    <a href="https://ieeexplore.ieee.org/document/10464939" target="_blank">IEEE</a>
+  </div>
+</footer>
+
+<script src="main.min.js" defer></script>
 </body>
-
 </html>

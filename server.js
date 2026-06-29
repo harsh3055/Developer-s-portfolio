@@ -1,5 +1,5 @@
 const http = require('http');
-const fs = require('fs');
+const fs   = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
@@ -8,21 +8,21 @@ const ROOT = __dirname;
 
 const MIME = {
   '.html': 'text/html',
-  '.css': 'text/css',
-  '.js': 'application/javascript',
-  '.jpg': 'image/jpeg',
+  '.css':  'text/css',
+  '.js':   'application/javascript',
+  '.jpg':  'image/jpeg',
   '.webp': 'image/webp',
-  '.png': 'image/png',
-  '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon',
-  '.woff2': 'font/woff2',
+  '.png':  'image/png',
+  '.svg':  'image/svg+xml',
+  '.ico':  'image/x-icon',
+  '.woff2':'font/woff2',
 };
 
 const CACHE = {
   '.html': 'no-cache',
-  '.css': 'public, max-age=31536000, immutable',
-  '.js': 'public, max-age=31536000, immutable',
-  '.jpg': 'public, max-age=31536000, immutable',
+  '.css':  'public, max-age=31536000, immutable',
+  '.js':   'public, max-age=31536000, immutable',
+  '.jpg':  'public, max-age=31536000, immutable',
   '.webp': 'public, max-age=31536000, immutable',
 };
 
@@ -38,8 +38,8 @@ http.createServer((req, res) => {
     res.end('Forbidden');
     return;
   }
-  const ext = path.extname(filePath).toLowerCase();
-  const mime = MIME[ext] || 'application/octet-stream';
+  const ext      = path.extname(filePath).toLowerCase();
+  const mime     = MIME[ext] || 'application/octet-stream';
 
   fs.readFile(filePath, (err, data) => {
     if (err) {
@@ -49,18 +49,16 @@ http.createServer((req, res) => {
     }
 
     const headers = {
-      'Content-Type': mime,
-      'Cache-Control': CACHE[ext] || 'no-cache',
+      'Content-Type':           mime,
+      'Cache-Control':          CACHE[ext] || 'no-cache',
       'X-Content-Type-Options': 'nosniff',
     };
 
     const acceptsGzip = (req.headers['accept-encoding'] || '').includes('gzip');
     if (acceptsGzip && GZIP.has(mime)) {
-      zlib.gzip(data, {
-        level: 6
-      }, (_, compressed) => {
+      zlib.gzip(data, { level: 6 }, (_, compressed) => {
         headers['Content-Encoding'] = 'gzip';
-        headers['Content-Length'] = compressed.length;
+        headers['Content-Length']   = compressed.length;
         res.writeHead(200, headers);
         res.end(compressed);
       });
